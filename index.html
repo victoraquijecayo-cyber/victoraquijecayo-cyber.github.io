@@ -11,13 +11,13 @@
     <meta property="og:title" content="Jardinería Elite" />
     <meta property="og:description" content="Jardinería premium para clientes exigentes. Mantenimiento, podas, huertos urbanos y más." />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="assets/og-cover.jpg" />
+    <meta property="og:image" content="assets/index19.png" />
     <meta property="og:url" content="https://tudominio.com" />
 
     <!-- Favicon -->
-    <link rel="icon" href="assets/favicon.png" />
+    <link rel="icon" href="assets/logo.png" />
 
-    <!-- TailwindCSS CDN (modo producción) -->
+    <!-- TailwindCSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -46,12 +46,11 @@
       }
     </script>
 
-    <!-- Fuente elegante sin coste adicional -->
+    <!-- Fuente -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
       html { scroll-behavior: smooth; }
-      body { font-family: 'Plus Jakarta Sans', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji'; }
-      /* Galería masonry simple */
+      body { font-family: 'Plus Jakarta Sans', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial; }
       .masonry { column-count: 1; column-gap: 1rem; }
       .masonry > * { break-inside: avoid; margin-bottom: 1rem; }
       @media (min-width: 640px) { .masonry { column-count: 2; } }
@@ -68,281 +67,112 @@
       "telephone": "+51 972 779 172",
       "areaServed": {"@type": "Country", "name": "Perú"},
       "paymentAccepted": ["Yape", "Transferencia"],
-      "image": ["assets/og-cover.jpg"],
+      "image": ["assets/index19.png"],
       "url": "https://tudominio.com"
     }
     </script>
   </head>
   <body class="bg-neutral-50 text-neutral-900">
-    <!-- Barra superior -->
+
+    <!-- Header -->
     <header class="bg-white/80 backdrop-blur sticky top-0 z-50 shadow">
       <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
-        <a href="#" class="flex items-center gap-3" aria-label="Jardinería Elite - Inicio">
-          <img src="assets/logo.svg" alt="Logo Jardinería Elite" class="h-9 w-9" />
-          <span class="text-xl font-semibold tracking-tight">Jardinería <span class="text-brand-700">Elite</span></span>
+        <a href="#" class="flex items-center gap-3">
+          <img src="assets/logo.png" alt="Logo Jardinería Elite" class="h-9 w-9" />
+          <span class="text-xl font-semibold">Jardinería <span class="text-brand-700">Elite</span></span>
         </a>
         <nav class="hidden md:flex items-center gap-8 text-sm">
-          <a class="hover:text-brand-700" href="#servicios">Servicios</a>
-          <a class="hover:text-brand-700" href="#galeria">Galería</a>
-          <a class="hover:text-brand-700" href="#pagos">Pagos</a>
-          <a class="hover:text-brand-700" href="#contacto">Contacto</a>
-          <a class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-brand-800 text-white hover:bg-brand-700 shadow-lux" href="https://wa.me/51972779172" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
-            <img src="assets/whatsapp.svg" alt="WhatsApp" class="h-4 w-4" />
-            WhatsApp
-          </a>
+          <a href="#servicios" class="hover:text-brand-700">Servicios</a>
+          <a href="#galeria" class="hover:text-brand-700">Galería</a>
+          <a href="#pagos" class="hover:text-brand-700">Pagos</a>
+          <a href="#contacto" class="hover:text-brand-700">Contacto</a>
+          <a href="https://wa.me/51972779172" target="_blank" class="px-4 py-2 rounded-xl bg-brand-800 text-white shadow-lux">WhatsApp</a>
         </nav>
-        <button class="md:hidden inline-flex items-center p-2 rounded-lg border" aria-label="Abrir menú" onclick="document.getElementById('mnav').classList.toggle('hidden')">☰</button>
+        <button class="md:hidden p-2 border rounded" onclick="document.getElementById('mnav').classList.toggle('hidden')">☰</button>
       </div>
       <div id="mnav" class="md:hidden hidden border-t">
         <div class="px-6 py-4 space-y-3 text-sm">
-          <a class="block" href="#servicios" onclick="mnav.classList.add('hidden')">Servicios</a>
-          <a class="block" href="#galeria" onclick="mnav.classList.add('hidden')">Galería</a>
-          <a class="block" href="#pagos" onclick="mnav.classList.add('hidden')">Pagos</a>
-          <a class="block" href="#contacto" onclick="mnav.classList.add('hidden')">Contacto</a>
-          <a class="block" href="https://wa.me/51972779172" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="#servicios" onclick="mnav.classList.add('hidden')">Servicios</a>
+          <a href="#galeria" onclick="mnav.classList.add('hidden')">Galería</a>
+          <a href="#pagos" onclick="mnav.classList.add('hidden')">Pagos</a>
+          <a href="#contacto" onclick="mnav.classList.add('hidden')">Contacto</a>
         </div>
       </div>
     </header>
 
     <!-- Hero -->
     <section class="relative overflow-hidden">
-      <div class="absolute inset-0">
-        <img src="assets/hero.jpg" alt="Jardín de alta gama con diseño elegante" class="w-full h-full object-cover" />
-        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
-      </div>
-      <div class="relative max-w-7xl mx-auto px-6 py-24 lg:py-36">
-        <div class="max-w-2xl text-white">
-          <h1 class="text-4xl lg:text-6xl font-semibold leading-tight">Jardinería premium para clientes exigentes</h1>
-          <p class="mt-5 text-lg text-white/90">Diseño, mantenimiento y paisajismo con estándares de hotel 5★. Atención a residencias, empresas y comunidades.</p>
-          <div class="mt-8 flex flex-wrap gap-4">
-            <a href="#contacto" class="px-6 py-3 rounded-xl bg-brand-500 hover:bg-brand-400 text-white font-medium shadow-lux">Solicitar cotización</a>
-            <a href="https://wa.me/51972779172" target="_blank" rel="noopener" class="px-6 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-medium border border-white/30">Escríbenos por WhatsApp</a>
-          </div>
+      <img src="assets/index19.png" alt="Jardín elegante" class="absolute inset-0 w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
+      <div class="relative max-w-7xl mx-auto px-6 py-24">
+        <h1 class="text-4xl md:text-6xl text-white font-bold">Jardinería premium para clientes exigentes</h1>
+        <p class="mt-5 text-lg text-white/90">Diseño, mantenimiento y paisajismo con estándares de hotel 5★.</p>
+        <div class="mt-8 flex gap-4">
+          <a href="#contacto" class="px-6 py-3 rounded-xl bg-brand-500 text-white">Solicitar cotización</a>
+          <a href="https://wa.me/51972779172" target="_blank" class="px-6 py-3 rounded-xl bg-white/10 text-white border">WhatsApp</a>
         </div>
-      </div>
-    </section>
-
-    <!-- Logos de confianza (opcional) -->
-    <section aria-label="Confían en nosotros" class="bg-white border-y">
-      <div class="max-w-7xl mx-auto px-6 py-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 items-center opacity-70">
-        <img src="assets/brand-1.svg" alt="Cliente 1" class="h-8 mx-auto" />
-        <img src="assets/brand-2.svg" alt="Cliente 2" class="h-8 mx-auto" />
-        <img src="assets/brand-3.svg" alt="Cliente 3" class="h-8 mx-auto" />
-        <img src="assets/brand-4.svg" alt="Cliente 4" class="h-8 mx-auto" />
-        <img src="assets/brand-5.svg" alt="Cliente 5" class="h-8 mx-auto" />
-        <img src="assets/brand-6.svg" alt="Cliente 6" class="h-8 mx-auto" />
       </div>
     </section>
 
     <!-- Servicios -->
     <section id="servicios" class="max-w-7xl mx-auto px-6 py-20">
-      <header class="max-w-3xl">
-        <h2 class="text-3xl md:text-4xl font-semibold">Servicios de jardinería</h2>
-        <p class="mt-3 text-neutral-600">Programas a medida con visitas programadas, reportes fotográficos y estándares de seguridad.</p>
-      </header>
-
+      <h2 class="text-3xl font-semibold">Servicios de jardinería</h2>
       <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Tarjeta -->
-        <article class="bg-white rounded-2xl border p-6 shadow">
-          <h3 class="font-semibold text-lg">Mantenimiento integral de jardines</h3>
-          <p class="mt-2 text-sm text-neutral-600">Plan mensual con corte, riego, fertilización, limpieza y control fitosanitario.</p>
+        <article class="bg-white p-6 rounded-2xl shadow border">
+          <h3 class="font-semibold">Mantenimiento integral</h3>
+          <p class="text-sm text-neutral-600">Corte, riego, fertilización y control fitosanitario.</p>
         </article>
-
-        <article class="bg-white rounded-2xl border p-6 shadow">
-          <h3 class="font-semibold text-lg">Corte de césped</h3>
-          <p class="mt-2 text-sm text-neutral-600">Altura óptima, orillado y soplado final. Equipos profesionales y silenciosos.</p>
+        <article class="bg-white p-6 rounded-2xl shadow border">
+          <h3 class="font-semibold">Podas especializadas</h3>
+          <p class="text-sm text-neutral-600">Arborista y protocolos de seguridad.</p>
         </article>
-
-        <article class="bg-white rounded-2xl border p-6 shadow">
-          <h3 class="font-semibold text-lg">Poda de arbustos</h3>
-          <p class="mt-2 text-sm text-neutral-600">Formación, rejuvenecimiento y topiaria. Eliminación de material y limpieza.</p>
+        <article class="bg-white p-6 rounded-2xl shadow border">
+          <h3 class="font-semibold">Huertos urbanos</h3>
+          <p class="text-sm text-neutral-600">Diseño e instalación con calendario de siembra.</p>
         </article>
-
-        <article class="bg-white rounded-2xl border p-6 shadow">
-          <h3 class="font-semibold text-lg">Limpieza general</h3>
-          <p class="mt-2 text-sm text-neutral-600">Desmalezado, retiro de hojas, barrido y lavado de áreas duras.</p>
-        </article>
-
-        <article class="bg-white rounded-2xl border p-6 shadow">
-          <h3 class="font-semibold text-lg">Control de plagas y enfermedades</h3>
-          <p class="mt-2 text-sm text-neutral-600">Diagnóstico profesional y tratamiento responsable. Opciones ecológicas.</p>
-        </article>
-
-        <article class="bg-white rounded-2xl border p-6 shadow">
-          <h3 class="font-semibold text-lg">Productos ecológicos u orgánicos</h3>
-          <p class="mt-2 text-sm text-neutral-600">Programa “verde” con biofertilizantes y control biológico (cuando aplique).</p>
-        </article>
-
-        <article class="bg-white rounded-2xl border p-6 shadow">
-          <h3 class="font-semibold text-lg">Podas especializadas y tala controlada</h3>
-          <p class="mt-2 text-sm text-neutral-600">Trabajo con arborista y protocolos de seguridad. Permisos municipales según normativa.</p>
-        </article>
-
-        <article class="bg-white rounded-2xl border p-6 shadow">
-          <h3 class="font-semibold text-lg">Podas estéticas o por seguridad</h3>
-          <p class="mt-2 text-sm text-neutral-600">Arbolado urbano, despeje de luminarias y cableado. Evaluación de riesgo.</p>
-        </article>
-
-        <article class="bg-white rounded-2xl border p-6 shadow">
-          <h3 class="font-semibold text-lg">Huertos urbanos y asesoría en cultivo</h3>
-          <p class="mt-2 text-sm text-neutral-600">Diseño, instalación y calendario de siembra. Capacitación en sitio.</p>
-        </article>
-
-        <article class="bg-white rounded-2xl border p-6 shadow">
-          <h3 class="font-semibold text-lg">Césped natural o sintético</h3>
-          <p class="mt-2 text-sm text-neutral-600">Venta e instalación con base, nivelación y drenaje. Garantía de instalación.</p>
-        </article>
-
-        <article class="bg-white rounded-2xl border p-6 shadow">
-          <h3 class="font-semibold text-lg">Mantenimiento a empresas o comunidades</h3>
-          <p class="mt-2 text-sm text-neutral-600">Contratos con SLA, reportes y supervisión. Atención a condominios y corporativos.</p>
-        </article>
-      </div>
-
-      <div class="mt-12 p-6 rounded-2xl bg-brand-50 border border-brand-100">
-        <p class="text-sm text-brand-800">¿Necesitas algo específico? Diseñamos planes a medida y visitas únicas para eventos o inspecciones.</p>
       </div>
     </section>
 
     <!-- Galería -->
     <section id="galeria" class="bg-white border-y">
       <div class="max-w-7xl mx-auto px-6 py-20">
-        <header class="max-w-3xl">
-          <h2 class="text-3xl md:text-4xl font-semibold">Galería de proyectos</h2>
-          <p class="mt-3 text-neutral-600">Un vistazo a la calidad de nuestro trabajo. Todas las fotos son reales y de nuestro equipo.</p>
-        </header>
-
-        <div class="mt-10 masonry" aria-label="Galería de trabajos de jardinería">
-          <!-- Sustituye los nombres por tus archivos reales en assets/gallery/ -->
-          <img src="assets/gallery/01.jpg" alt="Jardín residencial con setos podados" class="w-full rounded-2xl border shadow" loading="lazy" />
-          <img src="assets/gallery/02.jpg" alt="Instalación de césped natural" class="w-full rounded-2xl border shadow" loading="lazy" />
-          <img src="assets/gallery/03.jpg" alt="Huerto urbano elevado" class="w-full rounded-2xl border shadow" loading="lazy" />
-          <img src="assets/gallery/04.jpg" alt="Poda estética de arbustos" class="w-full rounded-2xl border shadow" loading="lazy" />
-          <img src="assets/gallery/05.jpg" alt="Mantenimiento en condominio" class="w-full rounded-2xl border shadow" loading="lazy" />
-          <img src="assets/gallery/06.jpg" alt="Control de plagas en área verde" class="w-full rounded-2xl border shadow" loading="lazy" />
+        <h2 class="text-3xl font-semibold">Galería de proyectos</h2>
+        <div class="mt-10 masonry">
+          <img src="assets/gallery/index1.jpeg" alt="Trabajo 1" class="rounded-2xl border shadow" />
+          <img src="assets/gallery/index2.jpeg" alt="Trabajo 2" class="rounded-2xl border shadow" />
+          <img src="assets/gallery/index3.jpeg" alt="Trabajo 3" class="rounded-2xl border shadow" />
+          <img src="assets/gallery/index4.jpeg" alt="Trabajo 4" class="rounded-2xl border shadow" />
+          <img src="assets/gallery/index5.jpeg" alt="Trabajo 5" class="rounded-2xl border shadow" />
+          <img src="assets/gallery/index6.jpeg" alt="Trabajo 6" class="rounded-2xl border shadow" />
         </div>
       </div>
     </section>
 
-    <!-- Pagos / Yape -->
+    <!-- Pagos -->
     <section id="pagos" class="max-w-7xl mx-auto px-6 py-20">
-      <div class="grid lg:grid-cols-2 gap-10 items-center">
-        <div>
-          <h2 class="text-3xl md:text-4xl font-semibold">Medios de pago</h2>
-          <p class="mt-3 text-neutral-600">Aceptamos Yape y transferencias. Solicita tu cotización y recibe un presupuesto detallado.</p>
-          <ul class="mt-6 space-y-2 text-neutral-800">
-            <li class="flex items-center gap-3"><span class="inline-block h-2 w-2 bg-brand-700 rounded-full"></span> Yape</li>
-            <li class="flex items-center gap-3"><span class="inline-block h-2 w-2 bg-brand-700 rounded-full"></span> Transferencia bancaria</li>
-            <li class="flex items-center gap-3"><span class="inline-block h-2 w-2 bg-brand-700 rounded-full"></span> Facturación para empresas</li>
-          </ul>
+      <h2 class="text-3xl font-semibold">Medios de pago</h2>
+      <p class="mt-3 text-neutral-600">Aceptamos Yape y transferencias bancarias.</p>
+      <div class="mt-6 grid md:grid-cols-2 gap-6">
+        <div class="bg-white border p-6 rounded-2xl shadow">
+          <img src="assets/index10.jpeg" alt="Código Yape" class="rounded-xl" />
         </div>
-        <div class="bg-white border rounded-2xl p-6 shadow">
-          <img src="assets/yape.png" alt="Código Yape para pagos" class="w-full h-auto rounded-xl" />
-          <p class="mt-3 text-center text-sm text-neutral-500">Escanea el QR para pagar con Yape.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA WhatsApp -->
-    <section aria-label="Contáctanos por WhatsApp" class="bg-brand-900">
-      <div class="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
-        <div class="text-white">
-          <h3 class="text-2xl font-semibold">¿Listo para empezar?</h3>
-          <p class="text-white/80">Atendemos rápido por WhatsApp. Envíanos fotos del área y te orientamos.</p>
-        </div>
-        <a href="https://wa.me/51972779172" target="_blank" rel="noopener" class="inline-flex items-center gap-3 px-6 py-3 rounded-xl bg-gold text-neutral-900 font-semibold shadow-lux">
-          <img src="assets/whatsapp.svg" alt="WhatsApp" class="h-5 w-5" />
-          +51 972 779 172
-        </a>
+        <ul class="space-y-2 text-neutral-800">
+          <li>✔ Yape</li>
+          <li>✔ Transferencia bancaria</li>
+          <li>✔ Facturación para empresas</li>
+        </ul>
       </div>
     </section>
 
     <!-- Contacto -->
     <section id="contacto" class="max-w-7xl mx-auto px-6 py-20">
-      <div class="grid lg:grid-cols-2 gap-10">
-        <div>
-          <h2 class="text-3xl md:text-4xl font-semibold">Solicita una cotización</h2>
-          <p class="mt-3 text-neutral-600">Cuéntanos qué necesitas. Respuesta en el mismo día hábil.</p>
-
-          <div class="mt-6 space-y-3 text-sm">
-            <p class="flex items-center gap-2"><img src="assets/phone.svg" class="h-4 w-4" alt="Teléfono"/> <span class="font-medium">WhatsApp:</span> <a class="text-brand-700 hover:underline" href="https://wa.me/51972779172" target="_blank" rel="noopener">+51 972 779 172</a></p>
-            <p class="flex items-center gap-2"><img src="assets/mail.svg" class="h-4 w-4" alt="Correo"/> <span class="font-medium">Correo:</span> <a class="hover:underline" href="mailto:contacto@tudominio.com">contacto@tudominio.com</a></p>
-            <p class="flex items-center gap-2"><img src="assets/map.svg" class="h-4 w-4" alt="Ubicación"/> Lima, Perú</p>
-          </div>
-        </div>
-
-        <form action="https://formspree.io/f/yourid" method="POST" class="bg-white border rounded-2xl p-6 shadow" aria-labelledby="contacto-title">
-          <input type="text" name="_gotcha" class="hidden" aria-hidden="true" />
-          <div class="grid grid-cols-1 gap-4">
-            <div>
-              <label for="nombre" class="block text-sm font-medium">Nombre completo</label>
-              <input id="nombre" name="nombre" type="text" required class="mt-1 w-full rounded-xl border px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-400" placeholder="Ej. Manuel Aquije" />
-            </div>
-            <div>
-              <label for="telefono" class="block text-sm font-medium">Número de contacto</label>
-              <input id="telefono" name="telefono" type="tel" inputmode="tel" required class="mt-1 w-full rounded-xl border px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-400" placeholder="Ej. +51 972 779 172" />
-            </div>
-            <div>
-              <label for="correo" class="block text-sm font-medium">Correo electrónico</label>
-              <input id="correo" name="correo" type="email" required class="mt-1 w-full rounded-xl border px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-400" placeholder="tucorreo@dominio.com" />
-            </div>
-            <div>
-              <label for="mensaje" class="block text-sm font-medium">Mensaje</label>
-              <textarea id="mensaje" name="mensaje" rows="4" required class="mt-1 w-full rounded-xl border px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-400" placeholder="Cuéntanos sobre tu jardín, medidas aproximadas, fotos, etc."></textarea>
-            </div>
-            <button type="submit" class="mt-2 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-brand-800 text-white font-semibold hover:bg-brand-700 shadow-lux">
-              Enviar solicitud
-            </button>
-            <p class="text-xs text-neutral-500">Al enviar aceptas nuestra <a href="#" class="underline">política de privacidad</a>.</p>
-          </div>
-        </form>
-      </div>
+      <h2 class="text-3xl font-semibold">Solicita una cotización</h2>
+      <p class="mt-3 text-neutral-600">Resolvemos tus consultas el mismo día.</p>
+      <p class="mt-6">📞 WhatsApp: <a href="https://wa.me/51972779172" class="text-brand-700">+51 972 779 172</a></p>
+      <p>📧 Correo: <a href="mailto:contacto@tudominio.com" class="text-brand-700">contacto@tudominio.com</a></p>
+      <p>📍 Lima, Perú</p>
     </section>
 
-    <!-- Pie -->
-    <footer class="bg-neutral-950 text-neutral-200">
-      <div class="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-4 gap-8">
-        <div class="md:col-span-2">
-          <a href="#" class="flex items-center gap-3">
-            <img src="assets/logo.svg" alt="Logo Jardinería Elite" class="h-8 w-8" />
-            <span class="text-lg font-semibold tracking-tight">Jardinería <span class="text-brand-400">Elite</span></span>
-          </a>
-          <p class="mt-4 text-sm text-neutral-400 max-w-md">Paisajismo y mantenimiento con estándares de excelencia. Presupuestos claros y cumplimiento garantizado.</p>
-        </div>
-        <div>
-          <h4 class="font-semibold">Contacto</h4>
-          <ul class="mt-3 space-y-2 text-sm">
-            <li>WhatsApp: <a href="https://wa.me/51972779172" target="_blank" rel="noopener" class="hover:underline">+51 972 779 172</a></li>
-            <li>Correo: <a href="mailto:contacto@tudominio.com" class="hover:underline">contacto@tudominio.com</a></li>
-            <li>Lima, Perú</li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="font-semibold">Enlaces</h4>
-          <ul class="mt-3 space-y-2 text-sm">
-            <li><a class="hover:underline" href="#servicios">Servicios</a></li>
-            <li><a class="hover:underline" href="#galeria">Galería</a></li>
-            <li><a class="hover:underline" href="#pagos">Pagos</a></li>
-            <li><a class="hover:underline" href="#contacto">Contacto</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="border-t border-neutral-800">
-        <div class="max-w-7xl mx-auto px-6 py-6 text-xs text-neutral-500 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p>© <span id="year"></span> Jardinería Elite. Todos los derechos reservados.</p>
-          <p>RUC / Datos legales aquí.</p>
-        </div>
-      </div>
-    </footer>
-
-    <!-- Botón flotante WhatsApp -->
-    <a href="https://wa.me/51972779172" target="_blank" rel="noopener" class="fixed bottom-5 right-5 inline-flex items-center justify-center h-14 w-14 rounded-full bg-[#25D366] shadow-2xl" aria-label="WhatsApp">
-      <img src="assets/whatsapp.svg" alt="WhatsApp" class="h-7 w-7" />
-    </a>
-
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
   </body>
 </html>
 
